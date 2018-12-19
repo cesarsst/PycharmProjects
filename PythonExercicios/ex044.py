@@ -5,16 +5,23 @@
 # 2x cartao: preço normal
 # 3x cartao: 20% de juros
 
+print('{:=^40}'.format(' Lojas Stenicos '))
 valor = float(input('Digite o valor do produto: '))
-pag = int(input('Qual metodo de pagemnto?\n 1 - Dinheiro/Cheque \n '
-      '2-Cartão \n 3- 2x no cartão \n 4- 3x no cartão \n :'))
+pag = int(input("""Qual metodo de pagemnto?
+1 - Dinheiro/Cheque 
+2- a vista cartão 
+3- 2x no cartão 
+4- 3x no cartão :"""))
 
 if pag == 1:
-    valor = valor-(valor*(10/100))
+    valor = valor - (valor * (10 / 100))
 elif pag == 2:
-    valor = valor-(valor*(5/100))
+    valor = valor - (valor * (5 / 100))
 elif pag == 3:
     valor = valor
+    print('O valor a ser pago será de {} em 2x de {}'.format(valor, valor / 2))
 else:
-    valor = valor+(valor*(20/100))
-print('Valor a ser pago pelo produto: {}'.format(valor))
+    parc = int(input('Em quantas parcelas?: '))
+    juros = (parc * (valor * (20 / 100)))
+    valor = valor + juros
+    print('Valor a ser pago pelo produto: {} | Total juros: {} '.format(valor, juros))

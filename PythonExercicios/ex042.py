@@ -9,13 +9,13 @@ b = float(input('Digite o lado 2: '))
 c = float(input('Digite o lado 3: '))
 
 if a < (b+c) and b < (a+c) and c < (a+b):
-    print('Pode formar um triangulo!')
-    if a == b and b == c:
-        print('O triangulo é equilátero!')
+    print('Pode formar um triangulo ', end='')
+    if a == b == c:
+        print('equilátero!')
     if a == b or b == c or c == a:
-        print('O triangulo é isóceles!')
+        print('isóceles!')
     else:
-        print('Todos os lados diferentes!')
+        print('Escaleno!')
 else:
     print('Não pode formar um triangulo!')
 

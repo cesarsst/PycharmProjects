@@ -7,11 +7,11 @@ print('1- Decimal \n 2- Octal \n 3-Hexadecimal')
 op = int(input('Digite para qual base deseja converter: '))
 
 if op == 1:
-    print(bin(num))
+    print(bin(num)[2:])
 elif op == 2:
-    print(oct(num))
+    print(oct(num)[2:])
 elif op == 3:
-    print(hex(num))
+    print(hex(num)[2:])
 else:
     print('Opção inválida!')
 
