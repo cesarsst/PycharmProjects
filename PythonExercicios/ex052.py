@@ -4,12 +4,15 @@
 n = int(input('Digite um valor para verificar se é primo: '))
 primo = 0
 
+print('O numero é divisivel por: ', end=' ')
 for c in range(1, n):
     if c != n and c != 1:
         if n % c == 0:
-            primo = 1
+           print('\033[034m{}\033[m'.format(c), end=' ')
+           primo = 1
+
 
 if primo != 1:
-    print('O numero é primo!')
+    print('\nO numero é primo!')
 else:
-    print('O numero não é primo!')
+    print('\nO numero não é primo!')

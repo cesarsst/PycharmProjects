@@ -4,6 +4,6 @@
 prTermo = int(input('Digite o primeiro termo: '))
 razao = int(input('Digite a razão da PA: '))
 
-for c in range(1,11):
-    print('{}'.format(prTermo))
+for c in range(1, 11):
+    print('{}'.format(prTermo), end=' ')
     prTermo += razao

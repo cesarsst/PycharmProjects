@@ -2,6 +2,6 @@
 # que estão no intervalo entre 1 a 50
 
 print('Numero pares entre 0 e 50')
-for c in range(0, 51, 2):
-    print(c)
+for c in range(2, 51, 2):
+    print(c, end=' ')
 print('Fim.')
