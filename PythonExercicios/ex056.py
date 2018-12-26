@@ -8,14 +8,15 @@ idades = []
 sexos = []
 
 for c in range(0, 4):
+    print('{} {}° pessoa {}'.format('='*10, c+1, '='*10))
 #Coletando dados
-    nome = str(input('Digite o nome: '))
+    nome = str(input('Digite o nome: ')).strip()
     idade = int(input('Digite a idade: '))
-    sexo = str(input('Digite o sexo 1-M 2-F : '))
+    sexo = str(input('Digite o sexo  M - masculino  F - feminino: ')).strip().lower()
 # Gravando dados na listas
     nomes.append(nome)
     idades.append(idade)
-    sexos.append(sexo)
+    sexos.append(sexo.lower())
 
 # calculo da media do grupo
 med_idade = 0
@@ -33,7 +34,7 @@ for c in range(0, 4):
             if idades[c] > maior:
                 maior = idades[c]
                 resp = nomes[c]
-print('Nome do homem mais velho : {}'.format(resp))
+print('Nome do homem mais velho é {} e tem {} anos'.format(resp, maior))
 
 # Procurando mulheres menores de 20 anos
 f_count = 0                 # variavel que armazena qtd de mulheres com menos de 20 anos

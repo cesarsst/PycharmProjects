@@ -9,21 +9,20 @@ x = ''.join(frase.split())
 # pegando o tamanho total da string nova
 tam = len(x)
 
-# variavel para verificar se é palindromo - 0- palindromo 1- n palindromo
-palindromo = 0
+# 1 solução para inter:
+inverso = x[::-1]
 
-d = tam-1                   # variavel auxiliar
-for c in range(0, tam):
-    if x[c] == x[d]:
-        d -= 1
-    else:
-        print('Não é palindromo!')
-        palindromo = 1
-        break
+# 2 solução
+#inverso = ''
+#for letra in range(tam-1, -1, -1):
+#    inverso += x[letra]
 
-# Verifica se é ou nao palindromo
-if palindromo == 0:
-    print('É palindromo!')
+if inverso == x:
+    print('É palindromo! ')
+else:
+    print('Não é palindromo!')
+
+
 
 
 

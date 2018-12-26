@@ -5,14 +5,15 @@ maior = 0
 menor = 0
 for c in range(1,6):
     peso = float(input('Digite o peso da pessoa: '))
-    if maior == 0 and menor == 0:
+    if c == 1:
         maior = peso
         menor = peso
-    elif peso > maior:
-        maior = peso
-    elif peso < menor:
-        menor = peso
+    else:
+        if peso > maior :
+            maior = peso
+        if peso < menor :
+            menor = peso
 
 
-print('Maior peso: {:2f}'.format(maior))
-print('Menor peso: {:2f}'.format(menor))
+print('Maior peso: {:.2f}'.format(maior))
+print('Menor peso: {:.2f}'.format(menor))
