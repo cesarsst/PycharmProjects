@@ -12,6 +12,6 @@ while c != -1:
     pa += razao
     c -= 1
     if c == 0:
-        c = int(input('\n Deseja mostrar mais quantos termos? : '))
+        c = int(input('\n Deseja mostrar mais quantos termos? [0]-Sair : '))
         if c == 0:
             c = -1

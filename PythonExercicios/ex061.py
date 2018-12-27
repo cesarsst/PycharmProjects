@@ -11,3 +11,4 @@ while c != 0:
     print('{} '.format(pa), end ='')
     pa += razao
     c -= 1
+print('Fim')
