@@ -4,7 +4,7 @@
 
 count = 0
 exp = str(input('Digite uma expressão: '))
-for c, y in enumerate(exp):
+for y in exp:
     if y == '(':
         count += 1
     elif y == ')':

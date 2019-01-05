@@ -7,8 +7,7 @@ lista = []
 impar = []
 par = []
 while True:
-    val = int(input('Digite um valor: '))
-    lista.append(val)
+    lista.append(int(input('Digite um valor: ')))
     resp = str(input('Deseja continuar? [S/N]')).upper().split()[0]
     if resp == 'N':
         break
