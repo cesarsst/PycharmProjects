@@ -7,17 +7,16 @@ jogadores = []
 info = {}
 gols_partida = []
 while True:
-    totalGols = 0
+    gols_partida.clear()
+    info.clear()
     info['nome'] = str(input('Nome: '))
     total_partida = int(input(f"Quantas partidas {info['nome']} jogou? "))
     for i in range(0, total_partida):
         gols_cont = (int(input(f"Quantos gols na partida {i}? ")))
         gols_partida.append(gols_cont)
-        totalGols += gols_cont
     info['gols'] = gols_partida.copy()
-    info['total'] = totalGols
+    info['total'] = sum(gols_partida)
     jogadores.append(info.copy())
-    gols_partida.clear()
 
     resp = str(input('Deseja continuar? [S/N]')).upper().split()[0]
     if resp == 'N':

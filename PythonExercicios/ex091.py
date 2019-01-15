@@ -4,18 +4,22 @@
 
 from random import randint
 from time import sleep
+from operator import itemgetter
 
-result = {'Player1': randint(1,6), 'Player2': randint(1,6), 'Player3': randint(1,6), 'Player4': randint(1,6)}
-maior = 0
-aux = 0
+result = {'Player1': randint(1, 6),
+          'Player2': randint(1, 6),
+          'Player3': randint(1, 6),
+          'Player4': randint(1, 6)}
+
 for k, v in result.items():
     print(f'O {k} tirou {v}')
     sleep(1)
 
-    if maior == 0:
-        maior = k
-        print(k)
-
+ranking = sorted(result.items(), key=itemgetter(1), reverse=True)
+print('Ranking: ')
+# Temos que tratar como uma lista
+for i, v in enumerate(ranking):
+    print(f'{i+1}° {v[0]} com {v[1]}')
 
 
 

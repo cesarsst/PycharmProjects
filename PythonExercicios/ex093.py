@@ -11,11 +11,9 @@ jogador['partidas jogadas'] = int(input('Partidas jogadas: '))
 gols = []
 total = 0
 for c in range(0, jogador['partidas jogadas']):
-    gol_partida = int(input(f'Gols na partida {c+1}: '))
-    gols.append(gol_partida)
-    total += gol_partida
-jogador['gols partida'] = gols
-jogador['total de gols'] = total
+    gols.append(int(input(f'Gols na partida {c+1}: ')))
+jogador['gols partida'] = gols[:]
+jogador['total de gols'] = sum(gols)
 
 for k, v in jogador.items():
     print(f'O campo {k} tem valor {v}.')
@@ -23,6 +21,6 @@ for k, v in jogador.items():
 print('{}'.format('#'*50))
 
 print(f"O jogador {jogador['nome']} jogou {jogador['partidas jogadas']} partidas.")
-for i in range(0, len(gols)):
-    print(f"Na partida {i+1}, fez {gols[i]} gols.")
+for i, v in enumerate(jogador['gols partida']):
+    print(f"Na partida {i+1}, fez {v} gols.")
 print(f"Foi um total de {jogador['total de gols']} gols.")
